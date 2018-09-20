@@ -1,0 +1,73 @@
+<!-- 导航条 -->
+<view class="navbar">
+    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">
+        {{item}}
+    </text>
+</view>
+<!-- 全部订单 -->
+<view hidden="{{currentTab!==0}}">
+    <!-- 已确定 -->
+    <view class="waitconfirm" wx:for="{{waitconfirm}}" wx:for-item="item" wx:key="waitconfirm" bindtap="onWaitconfirmDetails">
+        <view class="waitconfirm_top">
+            <view>用气编号:{{item.CustomeId}}</view>
+            <view style="color:#2168D3;">{{item.OrderType}}</view>
+        </view>
+        <view class="waitconfirm_middle">
+            <view class="waitconfirm_middle_list">订单金额: ￥{{item.Price}}</view>
+            <view class="waitconfirm_middle_list">联系电话：{{item.Phone}}</view>
+            <view class="waitconfirm_middle_list">地址：{{item.Address}}</view>
+        </view>
+        <view class="waitconfirm_bottom">
+            <view class="waitconfirm_btn">确定</view>
+        </view>
+    </view>
+    <!-- 待确定 -->
+    <view class="waitconfirm" wx:for="{{confirm}}" wx:for-item="item" wx:key="confirm" bindtap="onConfirmDetails">
+        <view class="waitconfirm_top">
+            <view>用气编号:{{item.CustomeId}}</view>
+            <view style="color:#0EBC8B;">{{item.OrderType}}</view>
+        </view>
+        <view class="waitconfirm_middle">
+            <view class="waitconfirm_middle_list">订单金额: ￥{{item.Price}}</view>
+            <view class="waitconfirm_middle_list">联系电话：{{item.Phone}}</view>
+            <view class="waitconfirm_middle_list">地址：{{item.Address}}</view>
+        </view>
+        <view class="waitconfirm_bottom">
+            <view class="waitconfirm_btn">确定</view>
+        </view>
+    </view>
+</view>
+<view hidden="{{currentTab!==1}}">
+    <!-- 已确定 -->
+    <view class="waitconfirm" wx:for="{{waitconfirm}}" wx:for-item="item" wx:key="waitconfirm" bindtap="onWaitconfirmDetails">
+        <view class="waitconfirm_top">
+            <view>用气编号:{{item.CustomeId}}</view>
+            <view style="color:#2168D3;">{{item.OrderType}}</view>
+        </view>
+        <view class="waitconfirm_middle">
+            <view class="waitconfirm_middle_list">订单金额: ￥{{item.Price}}</view>
+            <view class="waitconfirm_middle_list">联系电话：{{item.Phone}}</view>
+            <view class="waitconfirm_middle_list">地址：{{item.Address}}</view>
+        </view>
+        <view class="waitconfirm_bottom">
+            <view class="waitconfirm_btn">确定</view>
+        </view>
+    </view>
+</view>
+<view hidden="{{currentTab!==2}}">
+    <!-- 待确定 -->
+    <view class="waitconfirm" wx:for="{{confirm}}" wx:for-item="item" wx:key="confirm" bindtap="onConfirmDetails">
+        <view class="waitconfirm_top">
+            <view>用气编号:{{item.CustomeId}}</view>
+            <view style="color:#0EBC8B;">{{item.OrderType}}</view>
+        </view>
+        <view class="waitconfirm_middle">
+            <view class="waitconfirm_middle_list">订单金额: ￥{{item.Price}}</view>
+            <view class="waitconfirm_middle_list">联系电话：{{item.Phone}}</view>
+            <view class="waitconfirm_middle_list">地址：{{item.Address}}</view>
+        </view>
+        <view class="waitconfirm_bottom">
+            <view class="waitconfirm_btn">确定</view>
+        </view>
+    </view>
+</view>

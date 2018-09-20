@@ -1,0 +1,38 @@
+/* pages/OrderList/OrderList.wxss */
+.waitconfirm{
+    margin-top: 10rpx;
+    height: 400rpx;
+    padding: 0 20rpx;
+    background-color: #fff;
+    font-size: 28rpx;
+}
+.waitconfirm_top{
+    height: 88rpx;
+    display:flex;
+    justify-content: space-between;
+    line-height: 88rpx;
+    border-bottom: 2rpx solid #f5f5f5;
+}
+.waitconfirm_middle{
+    height: 225rpx;
+    border-bottom: 2rpx solid #f5f5f5;
+}
+.waitconfirm_middle_list{
+    height: 75rpx;
+    line-height: 75rpx;
+}
+.waitconfirm_bottom{
+    height: 82rpx;
+    display:flex;
+    justify-content: flex-end;
+}
+.waitconfirm_btn{
+    width: 160rpx;
+    height: 60rpx;
+    background-color: #2168D3;
+    color: #fff;
+    line-height: 60rpx;
+    text-align: center;
+    border-radius: 50rpx;
+    margin-top: 12rpx;
+}

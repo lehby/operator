@@ -1,0 +1,73 @@
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell weui-cell_input">
+      <image src="../../imgs/calendar.png" />
+    <view class="weui-cell__hd">
+      <view class="weui-label">选着日期</view>
+    </view>
+    <view class="weui-cell__bd">
+      <picker mode="date" value="{{date}}" start="2017-09-01" end="2030-09-01" bindchange="bindDateChange">
+        <view class="weui-input" style="padding-left:276rpx;">{{date}}</view>
+      </picker>
+    </view>
+  </view>
+</view>
+<view class="totalList">
+    <view class="totalList_top">
+        <view class="top_text">订单总量</view>
+        <view class="top_amount">500,000,000</view>
+    </view>
+    <view class="totalList_bottom">
+        <view>
+            <view>订气订单总量</view>
+            <view>500,000,000</view>
+        </view>
+        <view>
+            <view>维修订单总量</view>
+            <view>500,000,000</view>
+        </view>
+    </view>
+</view>
+<view class="gastotal">
+    <view class="gastotal_top">
+        <image src="../../imgs/gas.png" />
+        <view >订气订单数量</view>
+    </view>
+    <view class="gastotal_bottom">
+        <view class="gastotal_bottom_left">
+            <view class="phoneOrder">
+                <image src="../../imgs/Answer.png" />
+                <view >打电话订气订单</view>
+            </view>
+            <view class="phoneOrder_num">111,111,00</view>
+        </view>
+        <view class="gastotal_bottom_right">
+             <view class="phoneOrder">
+                <image src="../../imgs/system.png" />
+                <view >系统订气订单</view>
+            </view>
+            <view class="phoneOrder_num">111,111,00</view>
+        </view>
+    </view>
+</view>
+<view class="gastotal">
+    <view class="gastotal_top">
+        <image src="../../imgs/Repair.png" />
+        <view >维修订单数量</view>
+    </view>
+    <view class="gastotal_bottom">
+        <view class="gastotal_bottom_left">
+            <view class="phoneOrder">
+                <image src="../../imgs/Answer.png" />
+                <view >打电话维修订单</view>
+            </view>
+            <view class="phoneOrder_num">111,111,00</view>
+        </view>
+        <view class="gastotal_bottom_right">
+             <view class="phoneOrder">
+                <image src="../../imgs/system.png" />
+                <view >系统维修订单</view>
+            </view>
+            <view class="phoneOrder_num">111,111,00</view>
+        </view>
+    </view>
+</view>
