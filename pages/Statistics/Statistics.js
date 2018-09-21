@@ -5,12 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-    date: '2018-09-01',
-    time: '12:01'
+    StartDate: '2018-09-01',  
+    EndDate: '2018-09-01',
   },
   bindDateChange: function(e) {
     this.setData({
-      date: e.detail.value
+      StartDate: e.detail.value
+    })
+  },
+  onDateChange: function(e) {
+    this.setData({
+      EndDate: e.detail.value
     })
   },
   /**
