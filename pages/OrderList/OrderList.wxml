@@ -6,7 +6,7 @@
 </view>
 <!-- 全部订单 -->
 <view hidden="{{currentTab!==0}}">
-    <!-- 已确定 -->
+    <!-- 系统订单 -->
     <view class="waitconfirm" wx:for="{{waitconfirm}}" wx:for-item="item" wx:key="waitconfirm" bindtap="onWaitconfirmDetails">
         <view class="waitconfirm_top">
             <view>用气编号:{{item.CustomeId}}</view>
@@ -21,7 +21,7 @@
             <view class="waitconfirm_btn">确定</view>
         </view>
     </view>
-    <!-- 待确定 -->
+    <!-- 电话订单 -->
     <view class="waitconfirm" wx:for="{{confirm}}" wx:for-item="item" wx:key="confirm" bindtap="onConfirmDetails">
         <view class="waitconfirm_top">
             <view>用气编号:{{item.CustomeId}}</view>
@@ -37,7 +37,7 @@
         </view>
     </view>
 </view>
-<!-- 已确定 -->
+<!-- 系统订单 -->
 <view hidden="{{currentTab!==1}}">
     <view class="waitconfirm" wx:for="{{waitconfirm}}" wx:for-item="item" wx:key="waitconfirm" bindtap="onWaitconfirmDetails">
         <view class="waitconfirm_top">
@@ -54,7 +54,7 @@
         </view>
     </view>
 </view>
- <!-- 待确定 -->
+ <!-- 电话订单 -->
 <view hidden="{{currentTab!==2}}">
     <view class="waitconfirm" wx:for="{{confirm}}" wx:for-item="item" wx:key="confirm" bindtap="onConfirmDetails">
         <view class="waitconfirm_top">

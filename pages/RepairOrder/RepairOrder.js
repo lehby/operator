@@ -5,15 +5,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    navbar: ['全部订单', '待确认','已确认'],
+    navbar: ['全部订单', '系统订单','电话订单'],
     currentTab: 0,
     waitconfirm:[
-      {Price:'1200',Phone:'13325468900',CustomeId:'348867486123',Address:'龙泉区某某镇某某路',OrderType:'待确认'},
-      {Price:'1200',Phone:'13325468900',CustomeId:'348867486123',Address:'龙泉区某某镇某某路',OrderType:'待确认'},
+      {Price:'1200',Phone:'13325468900',CustomeId:'348867486123',Address:'龙泉区某某镇某某路',OrderType:'系统订单'},
+      {Price:'1200',Phone:'13325468900',CustomeId:'348867486123',Address:'龙泉区某某镇某某路',OrderType:'系统订单'},
     ],
     confirm:[
-      {Price:'1200',Phone:'13325468900',CustomeId:'348867486123',Address:'龙泉区某某镇某某路',OrderType:'已确认'},
-      {Price:'1200',Phone:'13325468900',CustomeId:'348867486123',Address:'龙泉区某某镇某某路',OrderType:'已确认'},
+      {Price:'1200',Phone:'13325468900',CustomeId:'348867486123',Address:'龙泉区某某镇某某路',OrderType:'电话订单'},
+      {Price:'1200',Phone:'13325468900',CustomeId:'348867486123',Address:'龙泉区某某镇某某路',OrderType:'电话订单'},
     ],
   },
   //已确定详情
