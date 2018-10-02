@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/RepairOrder/RepairOrder",
+    "pages/Login/Login",
     "pages/OrderList/OrderList",
     "pages/WaitconfirmDetails/WaitconfirmDetails",
     "pages/NewOrder/NewOrder",

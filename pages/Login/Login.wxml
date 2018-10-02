@@ -1,0 +1,28 @@
+<!--pages/Login.wxml-->
+<view class="user"style="margin-top: 174rpx;">
+    <view class="user_left" >
+        <text >手机号</text>
+    </view>
+    <view class="user_right">
+        <input placeholder="请输入手机号" data-text="name" bindblur="userName" maxlength="11"/>
+    </view>
+</view>
+<view class="user"style="margin-top: 54rpx;">
+    <view class="user_left">
+        <text >登录密码</text>
+    </view>
+    <view class="user_right">
+        <input placeholder="请输入密码" type="password" data-text="password" bindblur="password"/>
+    </view>
+</view>
+<view class="userBtn" style="margin-top: 30rpx;">
+    <view class="userBtn_left" bindtap="Tick">
+       
+    </view>
+    <view class="userBtn_right" bindtap="RetrievePassword">
+        
+    </view>
+</view>
+<view class="loginBtn" style="margin-top: 70rpx;" bindtap="onLogin">登录</view>
+<view class="registerBtn"style="margin-top: 28rpx;" bindtap="Register">
+</view>
