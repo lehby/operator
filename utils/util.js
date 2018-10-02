@@ -13,7 +13,17 @@ const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
 }
+//加密
+function Encryption(data) {
+  return data
+}
+//解密
+function Decrypt(data) {
+  return data
+}
 
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  Encryption:Encryption,
+  Decrypt:Decrypt
 }

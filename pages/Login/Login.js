@@ -1,5 +1,5 @@
 let app = getApp().globalData
-const baseUrls = app.baseUrl + '/Api/Login/AccountLogin' //登录接口
+const baseUrls = app.baseUrl + '/Api/Login/UserLogin' //登录接口
 const utils = require("../../utils/util.js")
 
 Page({
@@ -9,7 +9,47 @@ Page({
    */
   data: {
     Phone: "",
-    Password: ""
+    Password: "",
+    Verification:"",//获取验证码的值
+    text: "获取验证码",
+    currentTime: 60, //倒计时
+    disabled: false, //按钮是否禁用
+  },
+   //点击短信验证码发送事件
+   bindButtonTap() {
+    let this_ = this
+    this_.setData({
+      disabled: true
+    })
+
+    let currentTime = this_.data.currentTime
+    let text = this_.data.text
+    if (text === "获取验证码" || text === "重新发送") {
+      wx.showToast({
+        title: '短信验证码已发送',
+        icon: 'none',
+        duration: 2000
+      });
+      const interval = setInterval(function () {
+        currentTime--; //每执行一次让倒计时秒数减一
+        this_.setData({
+          text: currentTime + "s",
+        })
+        if (currentTime <= 0) {
+          clearInterval(interval)
+          this_.setData({
+            text: '重新发送',
+            currentTime: 60,
+            disabled: false,
+          })
+        }
+      }, 1000)
+    }
+  },
+  Verification(e){
+    this.setData({
+      Verification: e.detail.value
+    })
   },
   userName(e) {
     this.setData({
@@ -25,13 +65,16 @@ Page({
   onLogin() {
     let Phone = this.data.Phone
     let Password = this.data.Password
+    let Verification=this.data.Verification
+    console.log(Phone,Password)
     if (Phone !== "" && Password !== "") {
       wx.request({
         url: baseUrls,
         data: {
           Sign: "",
-          Phone: utils.Encryption(Phone),
-          Password: utils.Encryption(Password)
+          LoginAccount: Phone,
+          Password: utils.Encryption(Password),
+          VerificationCode:Verification
         },
         header: {
           'content-type': 'application/json'

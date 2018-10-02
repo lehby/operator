@@ -35,5 +35,6 @@ App({
   },
   globalData: {
     baseUrl: "http://192.168.0.66:2599",
+    User:null,//经营户信息
   }
 })
