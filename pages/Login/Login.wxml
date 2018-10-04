@@ -26,13 +26,12 @@
 </view>
 <view class="loginBtn" style="margin-top: 70rpx;" bindtap="onLogin">登录</view>
 <view class="registerBtn" style="margin-top: 28rpx;" bindtap="Register"></view>
+
 <!-- 选择经营户弹窗 -->
 <view class="modal-mask" bindtap="HideModal" catchtouchmove="preventTouchMove" wx:if="{{ShowModal}}"></view>
 <view class="modal-dialog" wx:if="{{ShowModal}}">
     <view>
         <view class='qux'>请选择经营户</view>
     </view>
-    <view class='text_wz'>上好佳</view>
-    <view class='text_wz'>上好佳</view>
     <view class='text_wz'>上好佳</view>
 </view>

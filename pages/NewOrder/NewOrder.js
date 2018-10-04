@@ -61,7 +61,13 @@ Page({
     MaintenanceTelephone: "",
     // 维修地址
     RepairAddress: "",
+    //问题描述
+    MaintenanceDescription: "",
 
+    // 点击后的保修
+    // RepairLabel: [],
+    // 渲染的保修列表
+    // guaranteeList: [],
     goodslist: [{
         Name: "商品1",
         Price: 120,
@@ -243,7 +249,7 @@ Page({
     })
   },
 
-  
+
   //预约时间Picker索引值
   bindPickerChange: function(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
@@ -287,8 +293,24 @@ Page({
     })
   },
 
+  // 收索电话用气编号——————————————————————————————————
+  collecting: function() {
+    let TelePhone = this.data.telephone
+    let gasnumber = this.data.Gasnumber
+    if (TelePhone == "" || gasnumber == "") {      
+      wx.showToast({            
+        title:'内容不能为空',
+        image:'../../imgs/1111.png',
+        duration:  2000        
+      })    
+    } else {
+
+    }
+    console.log(TelePhone, gasnumber)
+  },
+
   // 订气订单提交
-  ConfirmSuccess:function(){
+  ConfirmSuccess: function() {
     console.log(this.data.Gasnumber)
     console.log(this.data.Subscribers)
     console.log(this.data.telephone)
@@ -323,7 +345,17 @@ Page({
       RepairAddress: e.detail.value
     })
   },
-
+  // 获取维修描述
+  MaintenanceDescription: function(e) {
+    this.setData({
+      RepairAddress: e.detail.value
+    })
+  },
+  // 收索维修订单
+  collectingCable: function() {
+    let phone = this.data.MaintenanceTelephone
+    let Number = this.data.MaintenanceNumber
+  },
 
   // 提交维修表单
   Submit: function() {
@@ -334,6 +366,22 @@ Page({
   },
 
 
+  // 底部导航跳转
+  Booting: function() {
+    wx.redirectTo({
+      url: '/pages/OrderList/OrderList',
+    })
+  },
+  Repair: function() {
+    wx.redirectTo({
+      url: '/pages/RepairOrder/RepairOrder',
+    })
+  },
+  Statistics: function() {
+    wx.redirectTo({
+      url: '/pages/Statistics/Statistics',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

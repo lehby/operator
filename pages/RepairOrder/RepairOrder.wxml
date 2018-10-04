@@ -93,3 +93,24 @@
         </view>
     </view>
 </view>
+
+<!-- 底部 -->
+<view style='width:100%;height:120rpx;'></view>
+<view class='fonter_head'>
+  <view class='fonter'>
+    <image src='/imgs/order.png' bindtap='Newlyadded'></image>
+    <text >新增订单</text>
+  </view>
+  <view class='fonter' bindtap='Booting'>
+    <image src='/imgs/list.png'></image>
+    <text>订气订单</text>
+  </view>
+  <view class='fonter'>
+    <image src='/imgs/1111.png'></image>
+    <text style='color:#2269d4'>维修订单</text>
+  </view>
+  <view class='fonter' bindtap='Statistics'>
+    <image src='/imgs/Statistics.png'></image>
+    <text>统计表单</text>
+  </view>
+</view>

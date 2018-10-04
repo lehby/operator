@@ -44,6 +44,23 @@ Page({
 
   },
 
+  // 底部导航跳转
+  Newlyadded: function () {
+    wx.redirectTo({
+      url: '/pages/NewOrder/NewOrder',
+    })
+  },
+  Repair: function () {
+    wx.redirectTo({
+      url: '/pages/RepairOrder/RepairOrder',
+    })
+  },
+  Statistics: function () {
+    wx.redirectTo({
+      url: '/pages/Statistics/Statistics',
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

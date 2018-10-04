@@ -18,6 +18,26 @@ Page({
       EndDate: e.detail.value
     })
   },
+
+
+  // 底部导航跳转
+  Newlyadded: function () {
+    wx.redirectTo({
+      url: '/pages/NewOrder/NewOrder',
+    })
+  },
+  Repair: function () {
+    wx.redirectTo({
+      url: '/pages/RepairOrder/RepairOrder',
+    })
+  },
+  Booting: function () {
+    wx.redirectTo({
+      url: '/pages/OrderList/OrderList',
+    })
+  },
+
+
   /**
    * 生命周期函数--监听页面加载
    */

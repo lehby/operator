@@ -6,22 +6,30 @@
 </view>
 <!-- 新增订气 -->
 <view hidden="{{currentTab!==0}}">
-  <view class="orderList" style="margin-top: 12rpx;">
-    <view class="orderList_left">用气编号:</view>
-    <view class="orderList_right">
-      <input placeholder="请输入用气编号" type='text' data-text='identiflef' bindblur='Gasnumber' value='{{Gasnumber}}' />
+  <view class='input_width'>
+    <view>
+      <view class="orderList">
+        <view class="orderList_left">联系电话:</view>
+        <view class="orderList_right">
+          <input placeholder="请输入联系电话" type='number' value='{{telephone}}' bindinput='telephone' />
+        </view>
+      </view>
+      <view class="orderList">
+        <view class="orderList_left">用气编号:</view>
+        <view class="orderList_right">
+          <input placeholder="请输入用气编号" type='text' data-text='identiflef' bindinput='Gasnumber' value='{{Gasnumber}}' />
+        </view>
+      </view>
+    </view>
+    <view class='text_color' bindtap='collecting'>
+      <text>搜索</text>
     </view>
   </view>
+
   <view class="orderList">
     <view class="orderList_left">订购人:</view>
     <view class="orderList_right">
       <input placeholder="请输入订购人" type='text' value='{{name}}' bindblur='Subscribers' />
-    </view>
-  </view>
-  <view class="orderList">
-    <view class="orderList_left">联系电话:</view>
-    <view class="orderList_right">
-      <input placeholder="请输入联系电话" type='number' value='{{telephone}}' bindblur='telephone' />
     </view>
   </view>
   <view class="orderList">
@@ -110,24 +118,36 @@
 
 <!-- 新增维修------------- -->
 <view hidden="{{currentTab!==1}}">
-  <view class="orderList" style="margin-top: 12rpx;">
-    <view class="orderList_left">用气编号:</view>
-    <view class="orderList_right">
-      <input placeholder="请输入用气编号" type='text' value='{{MaintenanceNumber}}' bindblur='MaintenanceNumber' />
+
+  <view class='input_width'>
+    <view>
+      <view class="orderList">
+        <view class="orderList_left">联系电话:</view>
+        <view class="orderList_right">
+          <input placeholder="请输入联系电话" value='{{MaintenanceTelephone}}' bindinput='MaintenanceTelephone' />
+        </view>
+      </view>
+      <view class="orderList">
+        <view class="orderList_left">用气编号:</view>
+        <view class="orderList_right">
+          <input placeholder="请输入用气编号" type='text' value='{{MaintenanceNumber}}' bindinput='MaintenanceNumber' />
+        </view>
+      </view>
+    </view>
+    <view class='text_color' bindtap='collecting'>
+      <text>搜索</text>
     </view>
   </view>
+
+
+
   <view class="orderList">
     <view class="orderList_left">申报人:</view>
     <view class="orderList_right">
       <input placeholder="请输入申报人" type='text' value='{{MaintenanceName}}' bindblur='MaintenanceName' />
     </view>
   </view>
-  <view class="orderList">
-    <view class="orderList_left">联系电话:</view>
-    <view class="orderList_right">
-      <input placeholder="请输入联系电话" value='{{MaintenanceTelephone}}' bindblur='MaintenanceTelephone' />
-    </view>
-  </view>
+
   <view class="orderList">
     <view class="orderList_left">维修地址:</view>
     <view class="orderList_right">
@@ -172,10 +192,32 @@
     <form bindsubmit="formSubmit">
       <view class="page-section">
         <view class="textarea-wrp">
-          <textarea style='padding:20rpx 10rpx;' auto-focus="true" placeholder="具体描述一下问题所在" />
+          <textarea style='padding:20rpx 10rpx;' auto-focus="true" value='{{MaintenanceDescription}}' placeholder="具体描述一下问题所在" />
         </view>
       </view>
       <button class="submit" formType="submit" bindtap="Submit">提交</button>
     </form>
+  </view>
+</view>
+
+
+<!-- 底部 -->
+<view style='width:100%;height:120rpx;'></view>
+<view class='fonter_head'>
+  <view class='fonter'>
+    <image src='/imgs/order1.png'></image>
+    <text style='color:#2269d4'>新增订单</text>
+  </view>
+  <view class='fonter' bindtap='Booting'>
+    <image src='/imgs/list.png'></image>
+    <text >订气订单</text>
+  </view>
+  <view class='fonter' bindtap='Repair'>
+    <image src='/imgs/2222.png'></image>
+    <text>维修订单</text>
+  </view>
+  <view class='fonter' bindtap='Statistics'>
+    <image src='/imgs/Statistics.png'></image>
+    <text>统计表单</text>
   </view>
 </view>
